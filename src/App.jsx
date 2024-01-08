@@ -6,6 +6,7 @@ import DiscussionCard from './discussions/DiscussionCard'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import AlbumDetails from './album/AlbumDetails'
 import SearchAlbumParams from './album/SearchAlbumParams'
+import LoginPage from './auth/login/Login'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -23,11 +24,12 @@ function App() {
           <NavBar />
         </header>
         <Routes>
-          <Route path='/home' element={<Home />} />
+          <Route path="/auth/login" element={<LoginPage />} />
+          <Route path='/' element={<><Home />
+            <SearchAlbumParams /> </>} />
           <Route path='/discussions' element={<DiscussionCard />} />
           <Route path='/albums/:id' element={<AlbumDetails />} />
         </Routes>
-        <SearchAlbumParams />
       </QueryClientProvider>
     </BrowserRouter>
   )

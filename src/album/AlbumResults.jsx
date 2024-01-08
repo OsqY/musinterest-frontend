@@ -2,7 +2,7 @@ import AlbumCard from "./AlbumCard"
 
 const AlbumResults = ({ albums }) => {
   return (
-    <div className="mt-8 flex items-center justify-center">
+    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-8">
       {!albums.length ? (
         <h2> No albums, sorry... </h2>
       ) : (

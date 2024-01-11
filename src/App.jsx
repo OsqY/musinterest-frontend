@@ -8,6 +8,8 @@ import AlbumDetails from './album/AlbumDetails'
 import SearchAlbumParams from './album/SearchAlbumParams'
 import LoginPage from './auth/login/Login'
 import RegisterPage from './auth/sign-up/SignUp'
+import CreateDisussionForm from './discussions/CreateDiscussionForm'
+import DiscussionsPage from './discussions/DiscussionsPage'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -29,8 +31,9 @@ function App() {
           <Route path="/auth/register" element={<RegisterPage />} />
           <Route path='/' element={<><Home />
             <SearchAlbumParams /> </>} />
-          <Route path='/discussions' element={<DiscussionCard />} />
+          <Route path='/discussions' element={<DiscussionsPage />} />
           <Route path='/albums/:id' element={<AlbumDetails />} />
+          <Route path='/create-discussion' element={<CreateDisussionForm />} />
         </Routes>
       </QueryClientProvider>
     </BrowserRouter>

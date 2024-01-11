@@ -14,11 +14,11 @@ const LoginPage = () => {
     const obj = {
       email: formData.get("email"),
       username: formData.get("username"),
-      password: formData.get("password")
+      password: formData.get("password"),
     }
     setRequestParams(obj)
 
-    const response = await postLogin(requestParams).then(res => res.json()).then(resp => console.log(resp))
+    postLogin(requestParams)
   }
   return (
     <section className="bg-gray-50 dark:bg-gray-900">

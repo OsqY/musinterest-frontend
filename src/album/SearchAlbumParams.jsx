@@ -15,7 +15,7 @@ const SearchAlbumParams = () => {
     queryFn: fetchSearchAlbums,
   })
   const albums = !data?.data ? data ?? [] : data?.data ?? []
-
+  console.log(albums)
   return (
 
     <div className="mt-8 mx-8">
